@@ -10,9 +10,9 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'profile', label: '個人資料' },
   { id: 'experience', label: '工作經歷' },
   { id: 'skills', label: '專業技能' },
-  { id: 'autobiography', label: '自傳' },
+  { id: 'autobiography', label: '職涯自述' },
   { id: 'conditions', label: '求職條件' },
-  { id: 'capabilities', label: '證照與獎項' },
+  { id: 'capabilities', label: '專業證照' },
 ];
 
 export const Navbar: React.FC = () => {
@@ -46,7 +46,7 @@ export const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-sky-100 shadow-sm">
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <div 
           className="text-lg md:text-xl font-bold tracking-tight text-gray-900 cursor-pointer"
@@ -83,7 +83,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-white border-b border-sky-100 absolute w-full px-6 py-4 shadow-lg">
+        <div className="md:hidden bg-white border-b border-gray-200 absolute w-full px-6 py-4 shadow-lg">
           <div className="flex flex-col space-y-4">
             {NAV_ITEMS.map((item) => (
               <button

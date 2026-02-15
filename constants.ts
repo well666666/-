@@ -181,10 +181,10 @@ export const SKILLS: Skill[] = [
 export const CONDITIONS: JobCondition[] = [
   { label: "希望性質", value: "全職" },
   { label: "上班時段", value: "日班" },
-  { label: "可上班日", value: "錄取後一個月" },
+  { label: "可到職日", value: "面議" },
   { label: "希望地點", value: "高雄市" },
   { label: "希望待遇", value: "面議" },
-  { label: "希望職務", value: "人力資源管理人員、\n教育訓練人員" }
+  { label: "希望職務", value: "人力資源專員、\n教育訓練人員" }
 ];
 
 export const CERTIFICATES: Certificate[] = [
