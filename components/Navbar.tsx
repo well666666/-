@@ -46,7 +46,7 @@ export const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm">
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-sky-100 shadow-sm">
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <div 
           className="text-lg md:text-xl font-bold tracking-tight text-gray-900 cursor-pointer"
@@ -62,7 +62,7 @@ export const Navbar: React.FC = () => {
               key={item.id}
               onClick={() => scrollToSection(item.id)}
               className={`text-sm font-medium transition-colors duration-300 uppercase tracking-wide
-                ${activeId === item.id ? 'text-sky-600 font-bold' : 'text-gray-500 hover:text-sky-600'}
+                ${activeId === item.id ? 'text-sky-600 font-bold' : 'text-gray-600 hover:text-sky-600'}
               `}
             >
               {item.label}
@@ -74,7 +74,7 @@ export const Navbar: React.FC = () => {
         <div className="md:hidden">
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="text-gray-700 hover:text-sky-600 focus:outline-none"
+            className="text-gray-900 hover:text-sky-600 focus:outline-none"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -83,14 +83,14 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-white border-b border-gray-100 absolute w-full px-6 py-4 shadow-lg">
+        <div className="md:hidden bg-white border-b border-sky-100 absolute w-full px-6 py-4 shadow-lg">
           <div className="flex flex-col space-y-4">
             {NAV_ITEMS.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={`text-left text-sm font-medium uppercase tracking-wide
-                   ${activeId === item.id ? 'text-sky-600 font-bold' : 'text-gray-500'}
+                   ${activeId === item.id ? 'text-sky-600 font-bold' : 'text-gray-600'}
                 `}
               >
                 {item.label}
